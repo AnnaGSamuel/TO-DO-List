@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(240, 75, 144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Supermercado One', cursive;
+    
+}
+.home-heading {
+    text-align: center;
+}
+.task-container{
+    display:flex;
+    flex-direction: column-reverse;
+}
+.task-form {
+    background-color: rgb(221, 235, 36);
+    margin-top: 1rem;
+    width: 30rem;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+.task-name {
+    font-weight: bold;
+    font-size: large;
+
+}
+.task-desc {
+    color:rgb(12, 12, 12);
+
+}
+.task-btn-container {
+    margin: 2rem 0rem 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.task-btn-container *{
+    margin:0 0.2rem;
+    width:3.5rem;
+
+}
+.edit-heading{
+    text-align: center;
+}
+
+.edit-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(221, 235, 36);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.edit-container *{
+    margin: 0.2rem 0;
+}
+
+.edit-btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-btn-container *{
+    all:unset;
+    cursor: pointer;
+    background-color: rgb(65, 65, 65);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    width: 3rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}

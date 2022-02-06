@@ -1,0 +1,24 @@
+<h1 class="home-heading">TO-DO LIST</h1>
+<form class+"add-container" action="/" method="post">
+ <input type="text" name="taskName" placeholder="Task Name" autocomplete="off" required>   
+ <input type="text" name="taskDesc" placeholder="Task Description" autocomplete="off" required>
+ <button type="submit">Add</button>
+</form>
+{{#if tasks}}
+    <div class="task-container">
+    {{#each tasks}}
+    <form class="task-form">
+        <div class="task-name-container">
+        <p class="task-name">{{this.taskName}}</p>
+        <p class="task-desc">{{this.taskDesc}}</p>
+        </div>
+        <div class="task-btn-container">
+            <button type="submit" formaction="/edit/{{this._id}}">Edit</button>
+            <button type="submit" formaction="/delete/{{this._id}}">Delete</button>
+            
+        </div>
+    </form>
+    {{/each}}
+</div>
+{{/if}}
+

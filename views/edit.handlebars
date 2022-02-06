@@ -1,0 +1,13 @@
+<h1 class="edit-heading">EDIT TASK</h1>
+
+<form class="edit-container" method="post" action="/edit/{{task._id}}/save">
+    <label for="edit-taskname">Enter Task Name</label>
+    <input type="text" id="edit-taskname" autocomplete="off" name="editTaskName" value="{{task.taskName}}"required>
+    <label for="edit-taskdesc">Enter Task Description</label>
+    <input type="text" id="edit-taskdesc" autocomplete="off" name="editTaskDesc" value="{{task.taskDesc}}"required>
+    <div class="edit-btn-container">
+        <a href="/">Back</a>
+        <button type="submit">Edit</button>
+
+    </div>
+</form>
