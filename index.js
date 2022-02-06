@@ -5,8 +5,9 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('./models/toDoModel')
 const toDoModel = mongoose.model('todo')
+require('dotenv').config()
 
-mongoose.connect('mongodb://127.0.0.1:27017/todo',{useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.DATABASE_URI,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>console.log("The db is connected"))
 .catch((err)=>console.log(err))
 
@@ -59,7 +60,7 @@ app.post('/edit/:id/save', (req, res)=>{
 }
 )
 
-app.listen(port, () => {
+app.listen(process.env.PORT||port, () => {
     console.log(`Example app listening on port ${port}`)
 })
 
